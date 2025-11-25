@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 40px auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 50px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header .title {
+            font-size: 1.3em;
+            opacity: 0.95;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            font-size: 0.95em;
+        }
+
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .content {
+            padding: 50px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section:last-child {
+            margin-bottom: 0;
+        }
+
+        .section-title {
+            font-size: 1.5em;
+            color: #667eea;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #667eea;
+            font-weight: 600;
+        }
+
+        .experience-item, .education-item, .project-item {
+            margin-bottom: 25px;
+        }
+
+        .experience-item:last-child, .education-item:last-child, .project-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 8px;
+            flex-wrap: wrap;
+        }
+
+        .item-title {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .item-date {
+            color: #7f8c8d;
+            font-size: 0.9em;
+            font-style: italic;
+        }
+
+        .item-subtitle {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        .item-description {
+            color: #555;
+            margin-left: 0;
+        }
+
+        .item-description ul {
+            margin-left: 20px;
+            margin-top: 8px;
+        }
+
+        .item-description li {
+            margin-bottom: 5px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-category {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+
+        .skill-category h3 {
+            color: #2c3e50;
+            margin-bottom: 12px;
+            font-size: 1em;
+        }
+
+        .skill-category ul {
+            list-style: none;
+        }
+
+        .skill-category li {
+            padding: 4px 0;
+            color: #555;
+        }
+
+        .skill-category li:before {
+            content: "▹ ";
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+            .container {
+                box-shadow: none;
+                margin: 0;
+            }
+            .header {
+                background: #667eea;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 20px;
+            }
+            .header {
+                padding: 40px 30px;
+            }
+            .header h1 {
+                font-size: 2em;
+            }
+            .content {
+                padding: 30px;
+            }
+            .item-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .item-date {
+                margin-top: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Your Name</h1>
+            <div class="title">Full Stack Developer</div>
+            <div class="contact-info">
+                <a href="mailto:your.email@example.com">📧 your.email@example.com</a>
+                <a href="tel:+1234567890">📱 (123) 456-7890</a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank">💼 LinkedIn</a>
+                <a href="https://github.com/yourusername" target="_blank">🔗 GitHub</a>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="section">
+                <h2 class="section-title">Professional Summary</h2>
+                <p class="item-description">
+                    Results-driven Full Stack Developer with 5+ years of experience building scalable web applications.
+                    Proficient in modern JavaScript frameworks, cloud technologies, and agile methodologies.
+                    Passionate about creating elegant solutions to complex problems and delivering exceptional user experiences.
+                </p>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Experience</h2>
+
+                <div class="experience-item">
+                    <div class="item-header">
+                        <div class="item-title">Senior Full Stack Developer</div>
+                        <div class="item-date">Jan 2022 - Present</div>
+                    </div>
+                    <div class="item-subtitle">Tech Company Inc. • San Francisco, CA</div>
+                    <div class="item-description">
+                        <ul>
+                            <li>Led development of a microservices architecture serving 1M+ daily active users</li>
+                            <li>Improved application performance by 40% through code optimization and caching strategies</li>
+                            <li>Mentored junior developers and conducted code reviews to maintain code quality</li>
+                            <li>Collaborated with product and design teams to deliver features on time</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="item-header">
+                        <div class="item-title">Full Stack Developer</div>
+                        <div class="item-date">Jun 2020 - Dec 2021</div>
+                    </div>
+                    <div class="item-subtitle">Startup Ventures • Remote</div>
+                    <div class="item-description">
+                        <ul>
+                            <li>Built and deployed RESTful APIs using Node.js and Express</li>
+                            <li>Developed responsive front-end interfaces with React and TypeScript</li>
+                            <li>Implemented CI/CD pipelines reducing deployment time by 60%</li>
+                            <li>Integrated third-party services including payment gateways and analytics</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="item-header">
+                        <div class="item-title">Junior Developer</div>
+                        <div class="item-date">Aug 2019 - May 2020</div>
+                    </div>
+                    <div class="item-subtitle">Digital Agency • New York, NY</div>
+                    <div class="item-description">
+                        <ul>
+                            <li>Developed and maintained client websites using modern web technologies</li>
+                            <li>Collaborated with designers to implement pixel-perfect UI components</li>
+                            <li>Participated in agile ceremonies and sprint planning</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Education</h2>
+
+                <div class="education-item">
+                    <div class="item-header">
+                        <div class="item-title">Bachelor of Science in Computer Science</div>
+                        <div class="item-date">2015 - 2019</div>
+                    </div>
+                    <div class="item-subtitle">University Name • City, State</div>
+                    <div class="item-description">
+                        <p>GPA: 3.8/4.0 • Dean's List • Relevant Coursework: Data Structures, Algorithms, Web Development, Database Systems</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Frontend</h3>
+                        <ul>
+                            <li>React / Next.js</li>
+                            <li>TypeScript / JavaScript</li>
+                            <li>HTML5 / CSS3</li>
+                            <li>Tailwind CSS</li>
+                            <li>Redux / Context API</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Backend</h3>
+                        <ul>
+                            <li>Node.js / Express</li>
+                            <li>Python / Django</li>
+                            <li>RESTful APIs</li>
+                            <li>GraphQL</li>
+                            <li>Microservices</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Database</h3>
+                        <ul>
+                            <li>PostgreSQL</li>
+                            <li>MongoDB</li>
+                            <li>Redis</li>
+                            <li>MySQL</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>DevOps & Tools</h3>
+                        <ul>
+                            <li>Docker / Kubernetes</li>
+                            <li>AWS / GCP</li>
+                            <li>Git / GitHub</li>
+                            <li>CI/CD</li>
+                            <li>Vercel / Netlify</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Projects</h2>
+
+                <div class="project-item">
+                    <div class="item-header">
+                        <div class="item-title">E-Commerce Platform</div>
+                        <div class="item-date">2023</div>
+                    </div>
+                    <div class="item-description">
+                        <p>Built a full-featured e-commerce platform with Next.js, Stripe integration, and real-time inventory management. Handles 10K+ monthly transactions.</p>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="item-header">
+                        <div class="item-title">Task Management App</div>
+                        <div class="item-date">2022</div>
+                    </div>
+                    <div class="item-description">
+                        <p>Developed a collaborative task management application with real-time updates using React, Node.js, and WebSockets. Features include team collaboration, file uploads, and notifications.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
